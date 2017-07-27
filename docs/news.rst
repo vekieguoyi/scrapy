@@ -3,6 +3,44 @@
 Release notes
 =============
 
+Scrapy 1.4.1 (2017-XX-XX)
+-------------------------
+
+New features
+~~~~~~~~~~~~
+
+- Support ``<link>`` tags in ``Response.follow`` (issue #2785, PR #2789)
+- Support embeded ``ptpython`` shell (#2655)
+- Populate spider variable when using ``shell.inspect_response`` (#2812)
+- Handle HTTP 308 Permanent Redirect (issue #2844, PR #2847)
+- Add 522 and 524 to ``RETRY_HTTP_CODES`` (#2851)
+- Log versions information at startup (#2857)
+
+Bug fixes
+~~~~~~~~~
+
+- Fix PyPy test failures #2793
+- Fix DNS resolver when DNSCACHE_ENABLED=False (issue #2811, PR #2816)
+- Add cryptography for Debian Jessie tox test env (#2848)
+- Add verification to check if Request callback is callable (issue #2766, PR #2769)
+- Port ``extras/qpsclient.py`` to Python 3 (#2849)
+
+Docs
+~~~~
+
+- Added missing bullet point for the ``AUTOTHROTTLE_TARGET_CONCURRENCY`` setting. (#2756)
+- Include references to Scrapy subreddit in the docs (#2762)
+- Use https:// for readthedocs links
+- Document CloseSpider extension better (#2759)
+- Use ``pymongo.collection.Collection.insert_one()`` in MongoDB example (#2781)
+- Spelling mistake (#2828)
+- Clarify ``CSVFeedSpider.headers`` documentation (#2826)
+- Document ``DontCloseSpider`` exception and clarify ``spider_idle`` (#2791)
+- Update "Releases" section in README (#2764)
+- Fix rst syntax in ``DOWNLOAD_FAIL_ON_DATALOSS`` docs (#2763)
+- Fix a typo in the Items documentation (#2837)
+
+
 Scrapy 1.4.0 (2017-05-18)
 -------------------------
 
